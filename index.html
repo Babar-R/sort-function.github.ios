@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Sort</title>
+</head>
+<body>
+  <input type="text" id="inputString" placeholder="Enter a string">
+  <button onclick="sortString()">Sort</button>
+  <div id="result"></div>
+
+  <script>
+    function sortString() {
+  var inputElement = document.getElementById('inputString');
+  var inputValue = inputElement.value;
+
+  // Remove spaces from the string
+  var sortedString = inputValue.replace(/\s/g, '');
+
+  // Sort the characters in the string
+  sortedString = sortedString.split('').sort().join('');
+
+  // Display the sorted string in the result div
+  var resultElement = document.getElementById('result');
+  resultElement.textContent = sortedString;
+}
+
+  </script>
+</body>
+</html>
